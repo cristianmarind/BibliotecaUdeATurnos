@@ -1,0 +1,33 @@
+{
+  "libraries": [
+    {
+      "id": 1,
+      "name": "Biblioteca Carlos Gaviria Díaz",
+      "image": "https://s3.eu-west-1.amazonaws.com/genial.ly/5ca4faaf0adf672ea5bc8dee/1eb05b6d-b556-43fc-b4f7-5cb81b6d7793.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Centro de Documentación de Artes",
+      "image": "https://s3.eu-west-1.amazonaws.com/genial.ly/5ca4faaf0adf672ea5bc8dee/5107de9c-9de2-40d9-b9b5-922c9f2251be.jpeg"
+    }
+  ],
+  "filters": {
+    "services": {
+      "label": "Servicios requeridos",
+      "options": [
+        {
+          "id": 1,
+          "label": "Material Bibliografico"
+        },
+        {
+          "id": 2,
+          "label": "OPAC"
+        },
+        {
+          "id": 3,
+          "label": "Internet"
+        }
+      ]
+    }
+  }
+}

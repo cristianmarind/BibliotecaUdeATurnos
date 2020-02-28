@@ -1,0 +1,298 @@
+/*Estilo de los inputs*/
+.custom-input{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+  input, select, textarea{
+    outline:0px;
+    width: 100%;
+    min-height: 2em;
+    max-width: 31em;
+    border-color: $custom-green;
+    border-style: solid;
+    border-radius: .5em;
+    border-width: 2px;
+    padding: 0 .5rem;
+    ::placeholder {
+      color: $light !important;
+      font-size: small;
+    }
+  }
+  input:focus, select:focus{
+    border-color: $custom-dark-green;
+  }
+  label{
+    width: 100%;
+    max-width: 31em;
+    margin-bottom: 0px;
+    float: left;
+    font-size: medium;
+    color: $text-color;
+  }
+}
+/*Estilo de los botones*/
+.custom-btn{
+  outline:0px !important;
+  border: none !important;
+  font-size: medium;
+  font-weight: 500;
+  padding: .5rem 1.7rem !important;
+  border-radius: 0.9em !important;
+  min-height: 2em;
+}
+.custom-btn-success{
+  background-color: $custom-green !important;
+  outline:0px !important;
+  color: #fff !important;
+}
+.custom-btn-success:hover{
+  background-color: $custom-green !important;
+  outline:0px !important;
+}
+.custom-btn-success:active{
+  background-color: $custom-dark-green !important;
+  outline:0px !important;
+}
+
+/*Colores personalizados*/
+.custom-bg-primary{
+  background-color: $custom-primary-color !important;
+}
+.custom-text-primary{
+  color: $custom-primary-color !important;
+}
+.custom-border-color-primary{
+  border-color: $custom-primary-color !important;
+}
+
+.custom-bg-gray{
+  background-color: $custom-gray !important;
+}
+.custom-text-gray{
+  color: $custom-gray !important;
+}
+.custom-border-color-gray{
+  border-color: $custom-gray !important;
+}
+.custom-bg-light-gray{
+  background-color: $custom-light-gray-color !important;
+}
+.custom-text-light-gray{
+  color: $custom-light-gray-color !important;
+}
+.custom-border-color-light-gray{
+  border-color: $custom-light-gray-color !important;
+}
+
+.custom-bg-green{
+  background-color: $custom-green !important;
+}
+.custom-text-green{
+  color: $custom-green !important;
+}
+.custom-border-color-green{
+  border-color: $custom-green !important;
+}
+
+.custom-bg-blue{
+  background-color: $custom-blue !important;
+}
+.custom-text-blue{
+  color: $custom-blue !important;
+}
+.custom-border-color-blue{
+  border-color: $custom-blue !important;
+}
+
+.custom-bg-light-blue{
+  background-color: $custom-light-blue !important;
+}
+.custom-text-light-blue{
+  color: $custom-light-blue !important;
+}
+.custom-border-color-light-blue{
+  border-color: $custom-light-blue !important;
+}
+
+.custom-bg-dark-blue{
+  background-color: $custom-dark-blue !important;
+}
+.custom-text-dark-blue{
+  color: $custom-dark-blue !important;
+}
+.custom-border-color-dark-blue{
+  border-color: $custom-dark-blue !important;
+}
+
+
+.outline-0{
+  outline:0px !important;
+  *{
+    outline:0px !important;
+  }
+}
+
+.text-link{
+  text-decoration: underline !important;
+  color: #646568 !important;
+  cursor: pointer !important;
+}
+.text-link:hover{
+  color: #003e6f;
+}
+.text-color{
+  color: $text-color;
+}
+
+//Decoracion de texto
+.text-decoration-line-through{
+  text-decoration: line-through;
+}
+
+//Bordes
+.border-bottom-dotted{
+  border-bottom: dotted;
+  border-width: thin;
+}
+
+//Tamaños
+.w-100vw{
+  width: 100vw;
+}
+.h-100vh{
+  height: 100vh;
+}
+//Tamaño de la fuente
+.font-size-1-rem{
+  font-size: 1rem  !important;
+}
+.font-size-larger{
+  font-size: larger;
+}
+.font-size-large{
+  font-size: large;
+}
+.font-size-medium{
+  font-size: medium;
+}
+.font-size-small{
+  font-size: small;
+}
+.font-size-smaller{
+  font-size: smaller;
+}
+.font-size-x-large{
+  font-size: larger;
+}
+.font-size-x-small{
+  font-size: x-small;
+}
+.font-size-xx-large{
+  font-size: xx-large;
+}
+.font-size-xx-small{
+  font-size: xx-small;
+}
+
+//Utilidades
+.top-0{
+  top: 0;
+}
+.left-0{
+  left: 0;
+}
+.right-0{
+  right: 0;
+}
+.bottom-0{
+  bottom: 0;
+}
+
+//Modificacion de componente form-wizard
+.wizard-btn{
+  background-color: red;
+}
+
+//COL-X-0
+@media (max-width: 575px){
+  .col-0{
+    display: none !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px){
+  .col-sm-0{
+    display: none;
+  }
+  .position-sm-absolute{
+    position: absolute !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px){
+  .col-md-0{
+    display: none;
+  }
+  .position-md-absolute{
+    position: absolute !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px){
+  .col-lg-0{
+    display: none;
+  }
+  .position-lg-absolute{
+    position: absolute !important;
+  }
+}
+@media (min-width: 1200px){
+  .col-xl-0{
+    display: none;
+  }
+  .position-xl-absolute{
+    position: absolute !important;
+  }
+}
+//Estilos de imagenes
+.imageContain{
+  width: 100%;
+  height: auto;
+}
+.imageCover{
+  width: 100%;
+  height: auto;
+}
+@supports(object-fit: cover){
+  .imageContain{
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+  }
+  .imageCover{
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+//Scroll
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+*::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+*::-webkit-scrollbar:vertical {
+  width:10px;
+}
+*::-webkit-scrollbar-button:increment::-webkit-scrollbar-button {
+  display: none;
+} 
+*::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 10px;  
+}

@@ -7,10 +7,15 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    providerServices: new ProviderServices(process.env.VUE_APP_SERVER_HOST + process.env.VUE_APP_SERVER_LOOPBACK_ROUTES_PREFIX)
+    providerServices: new ProviderServices(process.env.VUE_APP_SERVER_HOST + process.env.VUE_APP_SERVER_LOOPBACK_ROUTES_PREFIX),
+    reservation: {
+      pcs: []
+    }
   },
   mutations: {
-    
+    setReservation(state, reservation){
+      state.reservation = reservation
+    }
   },
   getters: {
     providerServices(state){
@@ -24,6 +29,9 @@ export default new Vuex.Store({
     },
     filters(){
       return data.filters
+    },
+    reservation(state){
+      return state.reservation
     }
   },
   actions: {

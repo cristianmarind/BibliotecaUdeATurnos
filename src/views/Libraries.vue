@@ -1,5 +1,6 @@
 <template>
   <section class="librariesPage custom-bg-green d-flex flex-column justify-content-around">
+      <span class="text-light text-center">¿En que biblioteca quieres reservar una computadora?</span>
       <button v-for="(item, index) in libraries" @click="$router.push({path: `/library/${index}`})" :key="index" class="libraryContainer">
           <div class="w-100">
               <img class="w-100 h-auto shadow" :src="item.image" alt="" srcset="">

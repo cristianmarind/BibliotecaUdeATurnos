@@ -5,8 +5,6 @@ export default class ProviderService {
 
     constructor(rootAPI){
         this.rootAPI = rootAPI
-        console.log(this.rootAPI);
-        
         let token = localStorage.getItem('token');
         axios.interceptors.request.use(function (config) {
             config.headers.Authorization =  token;
@@ -84,10 +82,13 @@ export default class ProviderService {
     login(user) {
         return new Promise((resolve, reject) => {
             this.postModel('/LoguearUsuarioReserva.php', user).then(response => {
-                console.log(response);
-                this.postModel('/ChequearSesion.php').then(response => {
-                    console.log(response);
-                })
+                if (response.data.VALIDADO == true) {
+                    resolve()
+                }else{
+                    reject({
+                        msg: codes.CODES.LOGIN_FAILED.MSG
+                    })
+                }
                 /*localStorage.setItem('token', response.data.token);
                 localStorage.setItem('userId', response.data.userId);
                 axios.interceptors.request.use(function (config) {
@@ -95,14 +96,7 @@ export default class ProviderService {
                     config.headers.Authorization = token;
                     return config;
                 });*/
-                resolve(response.data)
               }).catch(error => {
-                if (error.response.data.error.code == codes.CODES.LOGIN_FAILED.CODE) {
-                    reject({
-                        msg: codes.CODES.LOGIN_FAILED.MSG,
-                        error
-                    })
-                }
                 reject({
                     msg: codes.CODES.DEFAULT.MSG,
                     error
